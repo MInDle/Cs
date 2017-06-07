@@ -6,5 +6,6 @@ public class CsClass
 		System.out.println("cs1992");
 		System.out.println("MIndle");
 		System.out.println("kitri");
+		System.out.println("dkdkdkdk");
 	}
 }
