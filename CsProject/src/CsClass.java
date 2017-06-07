@@ -9,6 +9,7 @@ public class CsClass {
 		System.out.println(sum(1, 10));
 	}
 
+	
 	public static int sum(int start, int end) {
 		int result = 0;
 		
