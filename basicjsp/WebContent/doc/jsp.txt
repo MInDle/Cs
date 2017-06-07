@@ -1,0 +1,105 @@
+** JSP (Java Server Page)
+1. project(eclipse) structure
+   src - package >> *.java
+   
+   webContent
+     - folder
+     - html, css, js, img
+     - *.jsp
+     - META-INF
+     - WEB-INF
+       - lib >> *.jar
+       - web.xml(2.5 이하)
+     
+2. 배포(실행)파일 (*.war)
+   project.war
+     - folder
+     - html, css, js, img
+     - *.jsp
+     - META-INF
+     - WEB-INF
+       - classes >> package >> *.class
+       - lib >> *.jar
+       - web.xml(2.5 이하)
+       
+3. jsp
+- servlet 	: *.java	html(String) in java
+- jsp		: *.jsp		java(script) in html
+       
+- script element : <%  java  %>
+a. 선언부 : jsp page 호출시 최초 실행.
+형식) <%!  변수, 메소드  %>
+<%!
+int x;
+String name = "안효인";
+public void plus() {
+
+}
+%>
+
+
+b. 처리부 : jsp page 호출시 매번 실행되는 영역 >> service method
+형식) <%  logic  %>
+<%
+x = 30;
+int z = x + 20;
+
+DB Logic(JDBC)
+
+out.println(name);
+%>
+
+
+c. 출력부 : jsp page 호출시 매번 실행 >> client 출력.
+형식) <%=  문자열  %>
+<%= name %>  == <% out.println(name); %>
+
+
+** jsp >> servlet으로 변환.
+public class SN extends XXX {
+
+	변수, 메소드 선언.  <<< a. 선언부
+
+	public void service(req, res) { << b. 처리부
+		
+		Logic처리
+		
+		out.println("html"); << c. 출력부
+		
+	}
+
+}   
+
+
+** 
+compile 기반 : java(인간) >> class(기계)
+ >> servlet, jsp(run)
+
+script 기반 : interpriter
+ >> asp, php, jsp(coding)
+
+
+-- directive (지시문) : <%@ name 속성이름1="속성값1" 속성이름2="속성값2" %>
+a. page
+<%@ page 속성이름="속성값" %>
+
+b. include
+<%@ include 속성이름="속성값" %>
+
+c. taglib
+<%@ taglib 속성이름="속성값" %>
+
+
+
+
+
+
+   
+       
+       
+       
+       
+       
+       
+       
+       
