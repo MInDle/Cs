@@ -5,5 +5,6 @@ public class CsClass
 	{
 		System.out.println("cs1992");
 		System.out.println("MIndle");
+		System.out.println("dkdkdkdk");
 	}
 }
